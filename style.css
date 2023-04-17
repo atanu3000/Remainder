@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-.wrapper {
+body .wrapper {
     display: flex;
 }
 
@@ -21,6 +21,7 @@
     align-items: center;
     letter-spacing: 1px;
     top: 0;
+    background-color: #fff;
     width: 100%;
     overflow: hidden;
     position: fixed;
@@ -56,7 +57,8 @@
     gap: 20px;
     /* height: 100dvh; */
     margin-top: 70px;
-    position: fixed;
+    overflow: hidden;
+    /* position: fixed; */
     /* align-items: center; */
 
 }
@@ -66,10 +68,11 @@
     /* justify-content: space-evenly; */
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    position:static;
+    /* height: 100vh; */
+    /* position:static; */
     flex-direction: column;
     margin: 0 10px;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -81,6 +84,7 @@
     width: 80%;
     border-radius: 20px;
     display: flex;
+    flex-direction: column;
     gap: 25px;
     background-color: blueviolet;
     color: #fff;
@@ -103,7 +107,40 @@
     box-shadow: 0 0 100px 5px #ccc;
 }
 
-.counter {
+#e1 {
+    background: coral;
+}
+
+#e2 {
+    background: seagreen;
+    display: none;
+}
+
+#e3 {
+    background: #5465f7;
+    display: none;
+}
+
+#e4 {
+    background: rebeccapurple;
+    display: none;
+}
+
+.timer {
+    box-shadow: 0 5px 15px rgba(42, 42, 42, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 30px auto 10px auto;
+    border-radius: 5px;
+    background-color: #000;
+    padding: 5px 10px;
+    
+}
+
+/* .counter {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -120,14 +157,14 @@
 .counter .box {
     font-size: 20px;
     font-weight: bold;
-}
+} */
 
 .events {
     background-color: #eeeeee71;
     padding: 10px;
     width: 800px;
-    height:100vh;
-    overflow-y: auto;
+    /* height:100vh; */
+    /* overflow-y: auto; */
 }
 
 .events .head {
@@ -148,6 +185,7 @@
     display: flex;
     flex-direction: column;
     gap: 25px;
+    
     padding: 0 20px;
     justify-content: center;
 }
@@ -162,10 +200,13 @@
     font-size: 26px;
 }
 
-.card button {
+.card a {
+    margin: 10px auto;
     width: 50%;
-    margin: 15px auto;
     margin-bottom: 0;
+}
+.card button {
+    width: 100%;
     padding: 5px 10px;
     border-radius: 10px;
     border: none;
