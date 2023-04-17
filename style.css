@@ -107,6 +107,9 @@
 }
 
 .counter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     box-shadow: 0 3px 15px rgba(100, 100, 100, .7);
     padding: 20px;
     margin: 40px auto;
@@ -114,6 +117,7 @@
     border-radius: 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .counter .box {
@@ -125,7 +129,7 @@
     background-color: #eeeeee71;
     padding: 10px;
     width: 800px;
-    height: 100vh;
+    height:100vh;
     overflow-y: auto;
 }
 
@@ -135,12 +139,11 @@
     padding: 10px 20px;
     margin-bottom: 20px;
     font-family: 'Dongle', sans-serif;
-    font-size: 24px;
+    font-size: 26px;
     letter-spacing: 1px;
 }
 
-.events .head a {
-    text-decoration: none;
+.events .head span {
     color: #5465f7;
 }
 
@@ -149,7 +152,7 @@
     flex-direction: column;
     gap: 25px;
     padding: 0 20px;
-    
+    justify-content: center;
 }
 
 .all-card .card {
@@ -160,7 +163,6 @@
     padding: 20px;
     font-family: 'Dongle', sans-serif;
     font-size: 26px;
-    
 }
 
 .card button {
