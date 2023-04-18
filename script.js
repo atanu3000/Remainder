@@ -103,7 +103,7 @@ function count(e_hour, e_min, e_sec, c_no) {
     sec_left = sec_left.toString().padStart(2, '0');
 
     remainTime[c_no].innerHTML = `Event Starts in: ${hour_left} : ${min_left} : ${sec_left}`;
-    // remainTime.style.color = 'yellow';
+    remainTime[c_no].style.color = 'yellow';
 };
 
 let event1 = document.querySelector('#e1');
