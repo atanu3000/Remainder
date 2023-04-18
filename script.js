@@ -1,6 +1,6 @@
 let cards = document.querySelectorAll('.event-time');
 let button = document.querySelectorAll('button');
-let coundown = document.querySelectorAll('.time');
+let countdown = document.querySelectorAll('.time');
 let remainTime = document.querySelectorAll('.remain_time');
 
 function event_time() {
@@ -81,11 +81,9 @@ function count(e_hour, e_min, e_sec, c_no) {
         min -= 60
         hour += 1
     }
-    if (hour > 12) {
-        hour -= 12
-    }
+    
 
-    let hour_left = e_hour - hour
+    let hour_left = parseInt(e_hour - hour) + 12
     let min_left = e_min - min
     let sec_left = e_sec - sec
 
@@ -96,6 +94,9 @@ function count(e_hour, e_min, e_sec, c_no) {
     if (min_left < 0) {
         min_left += 60
         hour_left -= 1
+    }
+    if (hour > 12) {
+        hour -= 12
     }
 
     hour_left = hour_left.toString().padStart(2, '0');
@@ -114,7 +115,7 @@ let event4 = document.querySelector('#e4');
 button.forEach((btn, i) => {
     btn.addEventListener('click', (btn_id) => {
         if (btn_id.target.id == 'c1-btn') {
-            coundown[i].innerHTML = `Event Time: ${cards[0].innerHTML}`;
+            countdown[i].innerHTML = `Event Time: ${cards[0].innerHTML}`;
             let e_hour = cards[0].innerHTML.slice(0, 2);
             let e_min = cards[0].innerHTML.slice(3, 5);
             let e_sec = 35;
@@ -125,7 +126,7 @@ button.forEach((btn, i) => {
             event4.style.display = 'none';
         }
         else if (btn_id.target.id == 'c2-btn') {
-            coundown[i].innerHTML = `Event Time: ${cards[1].innerHTML}`;
+            countdown[i].innerHTML = `Event Time: ${cards[1].innerHTML}`;
             let e_hour = cards[1].innerHTML.slice(0, 2);
             let e_min = cards[1].innerHTML.slice(3, 5);
             let e_sec = 25;
@@ -136,7 +137,7 @@ button.forEach((btn, i) => {
             event4.style.display = 'none';
         }
         else if (btn_id.target.id == 'c3-btn') {
-            coundown[i].innerHTML = `Event Time: ${cards[2].innerHTML}`;
+            countdown[i].innerHTML = `Event Time: ${cards[2].innerHTML}`;
             let e_hour = cards[2].innerHTML.slice(0, 2);
             let e_min = cards[2].innerHTML.slice(3, 5);
             let e_sec = 45;
@@ -147,7 +148,7 @@ button.forEach((btn, i) => {
             event4.style.display = 'none';
         }
         else if (btn_id.target.id == 'c4-btn') {
-            coundown[i].innerHTML = `Event Time: ${cards[3].innerHTML}`;
+            countdown[i].innerHTML = `Event Time: ${cards[3].innerHTML}`;
             let e_hour = cards[3].innerHTML.slice(0, 2);
             let e_min = cards[3].innerHTML.slice(3, 5);
             let e_sec = 55;
